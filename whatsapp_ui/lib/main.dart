@@ -16,11 +16,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Whatsapp"),
-      ),
-      body: FlutterLogo(
-        size: double.infinity,
-      ),
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: _doNothing,
+          ),
+          title: Text("Whatsappa"),
+          actions: <Widget>[
+            IconButton(onPressed: _doNothing, icon: Icon(Icons.menu)),
+            IconButton(onPressed: _doNothing, icon: Icon(Icons.message)),
+            IconButton(onPressed: _doNothing, icon: Icon(Icons.more_vert)),
+          ]),
     );
   }
 }
