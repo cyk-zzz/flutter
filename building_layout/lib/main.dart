@@ -78,7 +78,13 @@ class MyApp extends StatelessWidget {
         // body: const Center(
         //   child: Text('Hello World'),
         // ),
-        body: Column(children: [titleSection, buttonSection, textSection]),
+        body: ListView(children: [
+          Image.asset('image/lake.jpg',
+              width: 600, height: 240, fit: BoxFit.cover),
+          titleSection,
+          buttonSection,
+          textSection
+        ]),
       ),
     );
   }
