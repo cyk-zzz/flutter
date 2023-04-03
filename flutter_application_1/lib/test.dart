@@ -1,0 +1,3 @@
+void printTest() {
+  print("Hello");
+}
