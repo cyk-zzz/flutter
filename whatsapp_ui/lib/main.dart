@@ -18,52 +18,53 @@ class Home extends StatelessWidget {
       length: 3,
       initialIndex: 1,
       child: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: _doNothing,
+          appBar: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: _doNothing,
+            ),
+            title: Text("Whatsapp"),
+            actions: <Widget>[
+              IconButton(onPressed: _doNothing, icon: Icon(Icons.menu)),
+              IconButton(onPressed: _doNothing, icon: Icon(Icons.message)),
+              IconButton(onPressed: _doNothing, icon: Icon(Icons.more_vert)),
+            ],
+            bottom: TabBar(tabs: [
+              Tab(text: "CALLS", icon: Icon(Icons.call)),
+              Tab(text: "CHATS", icon: Icon(Icons.chat)),
+              Tab(text: "CONTACTS", icon: Icon(Icons.contacts)),
+            ]),
           ),
-          title: Text("Whatsapp"),
-          actions: <Widget>[
-            IconButton(onPressed: _doNothing, icon: Icon(Icons.menu)),
-            IconButton(onPressed: _doNothing, icon: Icon(Icons.message)),
-            IconButton(onPressed: _doNothing, icon: Icon(Icons.more_vert)),
-          ],
-          bottom: TabBar(tabs: [
-            Tab(text: "CALLS", icon: Icon(Icons.call)),
-            Tab(text: "CHATS", icon: Icon(Icons.chat)),
-            Tab(text: "CONTACTS", icon: Icon(Icons.contacts)),
-          ]),
-        ),
-        body: TabBarView(
-          children: [
-            Container(
-              color: Colors.pink,
-              child: Center(child: Text("Calls Tab")),
-            ),
-            Container(
-              color: Colors.white,
-              child: Center(child: Text("Chats Tab")),
-            ),
-            Container(
-              color: Colors.amber,
-              child: Center(child: Text("Contacts Tab")),
-            ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _doNothing,
-          child: Icon(Icons.add),
-        ),
-        bottomNavigationBar: TabBar(
-          tabs: [
-            Tab(text: 'CALLS', icon: Icon(Icons.call)),
-            Tab(text: 'CHATS', icon: Icon(Icons.chat)),
-            Tab(text: 'CONTACTS', icon: Icon(Icons.contacts)),
-          ],
-          labelColor: Colors.black,
-        ),
-      ),
+          body: TabBarView(
+            children: [
+              Container(
+                color: Colors.pink,
+                child: Center(child: Text("Calls Tab")),
+              ),
+              Container(
+                color: Colors.white,
+                child: Center(child: Text("Chats Tab")),
+              ),
+              Container(
+                color: Colors.amber,
+                child: Center(child: Text("Contacts Tab")),
+              ),
+            ],
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: _doNothing,
+            child: Icon(Icons.add),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: 1,
+            backgroundColor: Colors.pink,
+            items: [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.people), label: 'Friends'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.nature_people), label: 'Pending')
+            ],
+          )),
     );
   }
 }
