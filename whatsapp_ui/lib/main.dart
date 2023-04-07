@@ -55,6 +55,14 @@ class Home extends StatelessWidget {
           onPressed: _doNothing,
           child: Icon(Icons.add),
         ),
+        bottomNavigationBar: TabBar(
+          tabs: [
+            Tab(text: 'CALLS', icon: Icon(Icons.call)),
+            Tab(text: 'CHATS', icon: Icon(Icons.chat)),
+            Tab(text: 'CONTACTS', icon: Icon(Icons.contacts)),
+          ],
+          labelColor: Colors.black,
+        ),
       ),
     );
   }
