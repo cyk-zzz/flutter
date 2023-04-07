@@ -18,23 +18,7 @@ class Home extends StatelessWidget {
       length: 3,
       initialIndex: 1,
       child: Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: _doNothing,
-            ),
-            title: Text("Whatsapp"),
-            actions: <Widget>[
-              IconButton(onPressed: _doNothing, icon: Icon(Icons.menu)),
-              IconButton(onPressed: _doNothing, icon: Icon(Icons.message)),
-              IconButton(onPressed: _doNothing, icon: Icon(Icons.more_vert)),
-            ],
-            bottom: TabBar(tabs: [
-              Tab(text: "CALLS", icon: Icon(Icons.call)),
-              Tab(text: "CHATS", icon: Icon(Icons.chat)),
-              Tab(text: "CONTACTS", icon: Icon(Icons.contacts)),
-            ]),
-          ),
+          appBar: _buildAppBar(),
           body: TabBarView(
             children: [
               Container(
@@ -65,6 +49,26 @@ class Home extends StatelessWidget {
                   icon: Icon(Icons.nature_people), label: 'Pending')
             ],
           )),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      leading: IconButton(
+        icon: Icon(Icons.menu),
+        onPressed: _doNothing,
+      ),
+      title: Text("Whatsapp"),
+      actions: <Widget>[
+        IconButton(onPressed: _doNothing, icon: Icon(Icons.menu)),
+        IconButton(onPressed: _doNothing, icon: Icon(Icons.message)),
+        IconButton(onPressed: _doNothing, icon: Icon(Icons.more_vert)),
+      ],
+      bottom: TabBar(tabs: [
+        Tab(text: "CALLS", icon: Icon(Icons.call)),
+        Tab(text: "CHATS", icon: Icon(Icons.chat)),
+        Tab(text: "CONTACTS", icon: Icon(Icons.contacts)),
+      ]),
     );
   }
 }
