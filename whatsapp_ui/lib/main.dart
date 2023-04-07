@@ -19,26 +19,8 @@ class Home extends StatelessWidget {
       initialIndex: 1,
       child: Scaffold(
           appBar: _buildAppBar(),
-          body: TabBarView(
-            children: [
-              Container(
-                color: Colors.pink,
-                child: Center(child: Text("Calls Tab")),
-              ),
-              Container(
-                color: Colors.white,
-                child: Center(child: Text("Chats Tab")),
-              ),
-              Container(
-                color: Colors.amber,
-                child: Center(child: Text("Contacts Tab")),
-              ),
-            ],
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: _doNothing,
-            child: Icon(Icons.add),
-          ),
+          body: _buildTabView(),
+          floatingActionButton: _buildFloatingActionButton(),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: 1,
             backgroundColor: Colors.pink,
@@ -49,6 +31,32 @@ class Home extends StatelessWidget {
                   icon: Icon(Icons.nature_people), label: 'Pending')
             ],
           )),
+    );
+  }
+
+  FloatingActionButton _buildFloatingActionButton() {
+    return FloatingActionButton(
+      onPressed: _doNothing,
+      child: Icon(Icons.add),
+    );
+  }
+
+  TabBarView _buildTabView() {
+    return TabBarView(
+      children: [
+        Container(
+          color: Colors.pink,
+          child: Center(child: Text("Calls Tab")),
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("Chats Tab")),
+        ),
+        Container(
+          color: Colors.amber,
+          child: Center(child: Text("Contacts Tab")),
+        ),
+      ],
     );
   }
 
