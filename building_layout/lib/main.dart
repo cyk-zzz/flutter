@@ -125,11 +125,12 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
 
   void _toggleFavorite() {
     setState(() {
-      _isFavorited = !_isFavorited;
       if (_isFavorited) {
         _favoriteCount += 1;
+        _isFavorited = false;
       } else {
         _favoriteCount -= 1;
+        _isFavorited = true;
       }
     });
   }
@@ -147,6 +148,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
             icon: (_isFavorited
                 ? const Icon(Icons.star)
                 : const Icon(Icons.star_border)),
+            color: Colors.red[500],
             onPressed: _toggleFavorite,
           ),
         ),
