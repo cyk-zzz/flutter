@@ -18,19 +18,20 @@ class Home extends StatelessWidget {
       length: 3,
       initialIndex: 1,
       child: Scaffold(
-          appBar: _buildAppBar(),
-          body: _buildTabView(),
-          floatingActionButton: _buildFloatingActionButton(),
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: 1,
-            backgroundColor: Colors.pink,
-            items: [
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.people), label: 'Friends'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.nature_people), label: 'Pending')
-            ],
-          )),
+        appBar: _buildAppBar(),
+        body: _buildTabView(),
+        floatingActionButton: _buildFloatingActionButton(),
+        // bottomNavigationBar: BottomNavigationBar(
+        //   currentIndex: 1,
+        //   backgroundColor: Colors.pink,
+        //   items: [
+        //     BottomNavigationBarItem(
+        //         icon: Icon(Icons.people), label: 'Friends'),
+        //     BottomNavigationBarItem(
+        //         icon: Icon(Icons.nature_people), label: 'Pending')
+        //   ],
+        // )
+      ),
     );
   }
 
@@ -48,10 +49,11 @@ class Home extends StatelessWidget {
           color: Colors.pink,
           child: Center(child: Text("Calls Tab")),
         ),
-        Container(
-          color: Colors.white,
-          child: Center(child: Text("Chats Tab")),
-        ),
+        // Container(
+        //   color: Colors.white,
+        //   child: Center(child: Text("Chats Tab")),
+        // ),
+        _ChatsTabView(),
         Container(
           color: Colors.amber,
           child: Center(child: Text("Contacts Tab")),
@@ -77,6 +79,19 @@ class Home extends StatelessWidget {
         Tab(text: "CHATS", icon: Icon(Icons.chat)),
         Tab(text: "CONTACTS", icon: Icon(Icons.contacts)),
       ]),
+    );
+  }
+}
+
+class _ChatsTabView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Text('hello'),
+        Text('hello2'),
+        Text('hello3'),
+      ],
     );
   }
 }
