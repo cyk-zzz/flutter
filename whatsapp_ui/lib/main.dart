@@ -84,6 +84,9 @@ class Home extends StatelessWidget {
 }
 
 class _ChatsTabView extends StatelessWidget {
+  final List items;
+  const _ChatsTabView(this.items);
+
   @override
   Widget build(BuildContext context) {
     return ListView(
