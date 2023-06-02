@@ -10,4 +10,9 @@ class Assessment {
 
   double get percent =>
       (points.reduce((sum, item) => sum + item) / 20.0) * 100.0;
+
+  @override
+  String toString() {
+    return this.member.toString() + ' ' + this.points.toString();
+  }
 }

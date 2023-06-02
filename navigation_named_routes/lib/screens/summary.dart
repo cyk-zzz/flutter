@@ -58,7 +58,7 @@ class __ListTileState extends State<_ListTile> {
     if (result != null) {
       setState(() {
         widget.assessements[widget.index] = result;
-        print(result);
+        print(result.toString());
       });
     }
   }
