@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1017429531631",
+    "project_id": "test-f01ba",
+    "storage_bucket": "test-f01ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017429531631:android:15e7f06540407b5af2b41a",
+        "android_client_info": {
+          "package_name": "com.example.flitter_firebase_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017429531631-mp4cib3s14in90qh4k29ebr00mm1b0b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiKTAUwd7kRtUqQCwdtVxfr4G3FHiivbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017429531631-mp4cib3s14in90qh4k29ebr00mm1b0b9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017429531631-0i54faa5va9lcukbht5hk68ojl84sdog.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flitterFirebaseTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
