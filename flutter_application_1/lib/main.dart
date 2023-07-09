@@ -12,17 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<MyAppState>(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'Namer App',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+    return MultiProvider(providers: [
+      ChangeNotifierProvider<MyAppState>(
+        create: (context) => MyAppState(),
+        child: MaterialApp(
+          title: 'Namer App',
+          theme: ThemeData(
+            useMaterial3: true,
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          ),
+          home: MyHomePage(),
         ),
-        home: MyHomePage(),
       ),
-    );
+    ]);
   }
 }
 
