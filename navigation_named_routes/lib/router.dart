@@ -10,6 +10,7 @@ Route<dynamic> createRoute(settings) {
     case homeRoute:
     case summaryRoute:
       return MaterialPageRoute(
+        // Require 2 arguments to pass data between screen
         builder: (context) => SummaryScreen(mockData[0].member, mockData),
       );
 

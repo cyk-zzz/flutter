@@ -53,7 +53,9 @@ class _ListTile extends StatefulWidget {
 class __ListTileState extends State<_ListTile> {
   void _navigate() async {
     final result = await Navigator.pushNamed(context, detailsRoute,
-        arguments: Assessment.copy(widget.assessements[widget.index]));
+        arguments: Assessment.copy(
+          widget.assessements[widget.index],
+        ));
 
     if (result != null) {
       setState(() {
